@@ -45,7 +45,7 @@ class Alarm : Fragment(R.layout.alarm) {
                     val photos = body.photos
                     if (photos.isNotEmpty()) {
                         val randomIndex = Random.nextInt(photos.size)
-                        val image = photos[randomIndex].src.original
+                        val image = photos[randomIndex].src.portrait
 
                         Glide.with(requireContext().applicationContext)
                             .asDrawable()
