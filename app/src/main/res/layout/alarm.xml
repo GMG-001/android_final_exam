@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivBackgroundPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:background="@drawable/gradient_top" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnAdd"
+        android:layout_alignBottom="@id/btnAdd"
+        android:layout_marginHorizontal="16dp"
+        android:gravity="center"
+        android:text="Alarms"
+        android:textColor="#fff"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/btnAdd"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/circle_background"
+        android:padding="12dp"
+        android:src="@drawable/add" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnAdd"
+        android:layout_marginTop="4dp"
+        android:padding="4dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item" />
+
+</RelativeLayout>

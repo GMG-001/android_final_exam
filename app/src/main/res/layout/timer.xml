@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp">
+
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_edit_text"
+        app:layout_constraintVertical_bias="0.357" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="120dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="88dp"
+        android:backgroundTint="#8A76AE"
+        android:text="Start"
+        app:layout_constraintEnd_toEndOf="@+id/timer"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="@+id/timer"
+        app:layout_constraintTop_toBottomOf="@+id/timer"
+        tools:ignore="UsingOnClickInXml" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="120dp"
+        android:layout_height="58dp"
+        android:text="Reset"
+        android:onClick="reset"
+        android:visibility="invisible"
+        android:backgroundTint="#8A76AE"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <EditText
+        android:id="@+id/time_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter time (in minutes)"
+        android:inputType="number"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
